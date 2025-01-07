@@ -33,7 +33,7 @@ class Program
             });
 
             //Dados do login e da senha
-            string txt = @"C:\Users\lelopes\OneDrive - TRIBUNAL DE JUSTICA DE PERNAMBUCO\Documents\TXT\file.txt";
+            string txt = @"C:\Users\file_path\file.txt";
 
             Account conta = Account.LoadData(txt);
 
