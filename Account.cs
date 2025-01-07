@@ -15,8 +15,8 @@ public class Account
     {
         string[] lines = File.ReadAllLines(txt);
 
-        string email = lines[0];
-        string password = lines[1];
+        string email = lines[0]; //acount
+        string password = lines[1]; //password
 
         return new Account (email, password);
     }
