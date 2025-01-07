@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Packaging;
@@ -26,16 +26,16 @@ namespace TesteConsole
 
         public static async Task Main(string[] args)
         {
-            string url = "https://www2.tjpe.jus.br/portaldoanalista/ExternalAccess/GetRequestOffering?Ids=";
+            string url = "https://api_request_from_tjpe.com.br/...";
 
-            string login = "lelopes";
-            string secretKey = "BAZ47XRQB7XU5ZZGYQM7PNPWLY56L7Z4HP54Y4HZ626ATGHPE33Q";
+            string login = "my-login";
+            string secretKey = "secret-key";
 
-            short day = 6;
-            short month = 2;
-            short year = 2024;
+            short day = x;
+            short month = y;
+            short year = z;
 
-            string folder = $"C:\\Users\\lelopes\\OneDrive - TRIBUNAL DE JUSTICA DE PERNAMBUCO\\Chamados\\{year}\\{month}\\{day}";
+            string folder = $"C:\\Users\\file_path";
 
             string[] fullPath = Directory.GetFiles(folder);
 
@@ -203,4 +203,4 @@ namespace TesteConsole
             DateTime,
             Text
         }
-    }*/
+    }
