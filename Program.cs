@@ -10,9 +10,9 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        short dia = 2;
-        short mes = 10;
-        short ano = 2024;
+        short dia = x;
+        short mes = y;
+        short ano = z;
 
         var browserFetcher = new BrowserFetcher();
         await browserFetcher.DownloadAsync();
@@ -33,7 +33,7 @@ class Program
             });
 
             //Dados do login e da senha
-            /*string txt = @"C:\Users\lelopes\OneDrive - TRIBUNAL DE JUSTICA DE PERNAMBUCO\Documents\TXT\file.txt";
+            string txt = @"C:\Users\lelopes\OneDrive - TRIBUNAL DE JUSTICA DE PERNAMBUCO\Documents\TXT\file.txt";
 
             Account conta = Account.LoadData(txt);
 
@@ -57,7 +57,7 @@ class Program
 
             await page.WaitForSelectorAsync("#idBtn_Back");
             await page.ClickAsync("#idBtn_Back");
-            await Task.Delay(1000);*/
+            await Task.Delay(2000);
 
             // OneDrive
             /*await page.GoToAsync("https://tjpejus-my.sharepoint.com/");
@@ -82,11 +82,9 @@ class Program
             await page.ClickAsync($"button[title='{dia}']");
             await Task.Delay(2000);*/
 
-            await page.GoToAsync($"https://tjpejus-my.sharepoint.com/personal/leonardo_braga_tjpe_jus_br/_layouts/15/onedrive.aspx?isAscending=false&id=%2Fpersonal%2Fleonardo%5Fbraga%5Ftjpe%5Fjus%5Fbr%2FDocuments%2FChamados%2F{ano}%2F{mes}%2F{dia}&sortField=Modified&view=0");
-
             for (int j = dia; j <= 31; j++)
             {
-                await page.GoToAsync($"https://tjpejus-my.sharepoint.com/personal/leonardo_braga_tjpe_jus_br/_layouts/15/onedrive.aspx?isAscending=false&id=%2Fpersonal%2Fleonardo%5Fbraga%5Ftjpe%5Fjus%5Fbr%2FDocuments%2FChamados%2F{ano}%2F{mes}%2F{j}&sortField=Modified&view=0");
+                await page.GoToAsync($"https://straight_to_link.com.br/url...");
                 
                 await Task.Delay(5000);
 
@@ -105,7 +103,7 @@ class Program
                 string[] files = Directory.GetFiles(folder);
                 Console.WriteLine($"Quantidade total de chamados no dia {j}/{mes}/{ano}: {files.Length} áudios.\n\n");
 
-                string folderChamados = $"C://Users//lelopes//OneDrive - TRIBUNAL DE JUSTICA DE PERNAMBUCO//Chamados//" + ano + "//" + mes + "//" + j;
+                string folderChamados = $"C://Users//file_path//" + ano + "//" + mes + "//" + j;
                 string[] filesChamados = Directory.GetFiles(folderChamados);
 
                 for (int i = filesChamados.Length; i < files.Length; i++)
